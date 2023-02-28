@@ -1,0 +1,287 @@
+/* Base */
+:root{
+  --Orange: hsl(26, 100%, 55%);
+  --Pale_orange: hsl(25, 100%, 94%);
+  --Bold: 700;
+  --normal: 400;
+  --Light_grayish_blue: hsl(0, 6%, 77%);
+  --redish_white: rgb(223, 167, 145);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+  width: 100%;
+  /* margin: 10px auto; */
+}
+/* Base */
+
+
+
+
+/* HTML Elements */
+a{
+  text-decoration: none;
+  color: var(--Light_grayish_blue);
+}
+
+li{
+  list-style: none;
+}
+
+nav{
+  /* border-bottom: 2px solid var(--Light_grayish_blue); */
+}
+
+img{
+  border-radius: 0;
+}
+/* HTML Elements */
+
+
+
+/* Reusable Classes */
+.flx-btwn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.algn-center{
+  align-items: center;
+}
+
+.mrgn-r-l{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mrgn-t-b{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-div img{
+  max-width: 100%;
+}
+
+.img-div{
+  position: relative;
+}
+
+.product-div{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.company-name{
+  color: var(--Orange);
+  font-size: .7rem;
+  margin: 10px 0;
+}
+
+.season-offer{
+  color: black;
+  margin: 10px 0 25px 0;
+}
+
+.product-details{
+  color: var(--Light_grayish_blue);
+}
+
+.price-div{
+  width: 80%;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.price{
+  font-size: 2rem;
+}
+
+.discount-percentage{
+  background-color: var(--redish_white);
+  padding: .2em;
+  color: var(--Orange);
+  font-weight: var(--Bold);
+  border-radius: 5px;
+  font-size: .9rem;
+}
+
+.old-price{
+  text-decoration: line-through;
+  color: var(--Light_grayish_blue);
+}
+
+.btn{
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px 0;
+  text-align: center;
+  border: 0;
+}
+
+.in-btn{
+  margin: 0 10px;
+  position: relative;
+  top: 2px;
+}
+
+.arrows{
+  position: absolute;
+  width: 50px;
+  bottom: 50%;
+  border-radius: 100%;
+  border: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Reusable Classes */
+
+
+
+
+/* Specific Classes */
+.img-panel div{
+  display: none;
+}
+
+.nav-list{
+  display: none;
+  /*Medai queries edit*/
+}
+
+.left-side-nav{
+  width: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.right-side-nav{
+  width: 22%;
+  align-items: center;
+  margin-right:5px;
+}
+
+.avatar{
+  width: 40px;
+}
+
+.price-div{
+  display: flex;
+  margin: 40px auto 30px auto;
+  width: 100%;
+}
+
+.price-div > div:first-child{
+  width: 50%;
+}
+
+.price-div > div:last-child{
+  width: 20%;
+}
+
+.cart-actions-div{
+  margin: 20px auto;
+  width: 100%;
+}
+
+.number-of-products-btn{
+  background-color: gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding: .8em;
+  align-items: center;
+}
+
+.number-of-products-btn > div{
+  display: flex;
+  align-items: center;
+}
+
+.img-panel{
+  display: none;
+}
+
+.hamburgerNav{
+  width: 60%;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  background-color: white;
+  z-index: 99;
+  display: none;
+}
+
+.hamburgerNav > div:first-child{
+  padding: 20px;
+}
+
+.nav-list-ham{
+  margin: 20px;
+}
+
+.nav-list-ham li{
+  margin: 20px;
+}
+
+.nav-list-ham li a{
+  color: black;
+  font-weight: var(--Bold);
+}
+
+.page-cover{
+  background-color: rgba(0, 0, 0, 0.736);
+  width: 100%;
+  height: 100vh;
+  z-index: 90;
+  top: 0;
+  position: absolute;
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+.disable-scroll{
+  overflow: hidden;
+}
+/* Specific Classes */
+
+
+
+
+/* IDs */
+#add-to-cart{
+  background-color: var(--Orange);
+  font-size: 1rem;
+  color: white;
+  padding: .9em;
+  font-weight: var(--Bold);
+}
+
+#left-arrow{
+  left: 15px;
+}
+
+#right-arrow{
+  right: 15px;
+}
+
+#menu-btn{
+  display: block;
+}
+/* IDs */
+
+
