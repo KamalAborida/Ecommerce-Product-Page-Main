@@ -39,44 +39,18 @@ li{
 }
 
 nav{
-  /* border-bottom: 2px solid var(--Light_grayish_blue); */
+  border-bottom: 0;
 }
 
 img{
   border-radius: 0;
+  max-width: 100%;
 }
 /* HTML Elements */
 
 
 
 /* Reusable Classes */
-.flx-btwn{
-  display: flex;
-  justify-content: space-between;
-}
-
-.algn-center{
-  align-items: center;
-}
-
-.mrgn-r-l{
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.mrgn-t-b{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.img-div img{
-  max-width: 100%;
-}
-
-.img-div{
-  position: relative;
-}
-
 .product-div{
   width: 80%;
   margin: 20px auto;
@@ -97,23 +71,19 @@ img{
   color: var(--Light_grayish_blue);
 }
 
-.price-div{
-  width: 80%;
-  margin: 10px auto;
-  align-items: center;
-}
-
 .price{
   font-size: 2rem;
 }
 
 .discount-percentage{
   background-color: var(--redish_white);
-  padding: .2em;
+  padding: .4em;
   color: var(--Orange);
   font-weight: var(--Bold);
   border-radius: 5px;
   font-size: .9rem;
+  margin-left: 20px;
+  height: 50%;
 }
 
 .old-price{
@@ -134,83 +104,37 @@ img{
   position: relative;
   top: 2px;
 }
-
-.arrows{
-  position: absolute;
-  width: 50px;
-  bottom: 50%;
-  border-radius: 100%;
-  border: 0;
-  padding: 15px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 /* Reusable Classes */
 
 
 
 
-/* Specific Classes */
-.img-panel div{
-  display: none;
+/* Nav */
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > div:first-child{
+  display: flex;
+  width: 55%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > div:last-child{
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav-list{
   display: none;
-  /*Medai queries edit*/
-}
-
-.left-side-nav{
-  width: 60%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.right-side-nav{
-  width: 22%;
-  align-items: center;
-  margin-right:5px;
 }
 
 .avatar{
   width: 40px;
-}
-
-.price-div{
-  display: flex;
-  margin: 40px auto 30px auto;
-  width: 100%;
-}
-
-.price-div > div:first-child{
-  width: 50%;
-}
-
-.price-div > div:last-child{
-  width: 20%;
-}
-
-.cart-actions-div{
-  margin: 20px auto;
-  width: 100%;
-}
-
-.number-of-products-btn{
-  background-color: gainsboro;
-  display: flex;
-  justify-content: space-between;
-  padding: .8em;
-  align-items: center;
-}
-
-.number-of-products-btn > div{
-  display: flex;
-  align-items: center;
-}
-
-.img-panel{
-  display: none;
 }
 
 .hamburgerNav{
@@ -239,7 +163,107 @@ img{
   color: black;
   font-weight: var(--Bold);
 }
+/* Nav */
 
+
+
+
+/*Left Side Main*/
+.img-panel div{
+  display: none;
+}
+
+.img-panel{
+  display: none;
+}
+
+#left-arrow{
+  left: 15px;
+}
+
+#right-arrow{
+  right: 15px;
+}
+
+#menu-btn{
+  display: block;
+}
+
+.arrows{
+  position: absolute;
+  width: 50px;
+  bottom: 50%;
+  border-radius: 100%;
+  border: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Left Side Main*/
+
+
+
+
+/*Right Side Main*/
+.product-info-div{
+  width: 90%;
+  margin: 10px auto 0 auto;
+}
+
+.price-div{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto 30px auto;
+}
+
+.price-div > div:first-child{
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.price-div > div:last-child{
+  width: 20%;
+}
+
+.cart-actions-div{
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.number-of-products-btn{
+  background-color: gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding: .8em;
+  align-items: center;
+  width: 100%;
+}
+
+.number-of-products-btn > div{
+  display: flex;
+  align-items: center;
+}
+
+#add-to-cart{
+  background-color: var(--Orange);
+  font-size: 1rem;
+  color: white;
+  padding: .9em;
+  font-weight: var(--Bold);
+  width: 100%;
+}
+/*Right Side Main*/
+
+
+
+
+/*Others*/
 .page-cover{
   background-color: rgba(0, 0, 0, 0.736);
   width: 100%;
@@ -257,31 +281,137 @@ img{
 .disable-scroll{
   overflow: hidden;
 }
-/* Specific Classes */
+/*Others*/
 
 
 
+@media screen and (min-width: 1000px) {
+  .hamburgerNav{
+    display: none;
+  }
 
-/* IDs */
-#add-to-cart{
-  background-color: var(--Orange);
-  font-size: 1rem;
-  color: white;
-  padding: .9em;
-  font-weight: var(--Bold);
+  .page-cover{
+    display: none;
+  }
+
+  .container{
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  p{
+    font-size: 1rem;
+  }
+
+  /* Nav */
+  nav{
+    border-bottom: 2px solid var(--Light_grayish_blue);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+
+  nav > div:first-child{
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .avatar{
+    width: 60px;
+  }
+
+  nav > div:last-child{
+    width: 20%;
+    justify-content: space-around;
+  }
+
+  .nav-list{
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+  }
+
+  #menu-btn{
+    display: none;
+  }
+  /* Nav */
+
+
+  /*Left Side Main*/
+
+img{
+  border-radius: 15px;
 }
 
-#left-arrow{
-  left: 15px;
+.left-side-main{
+  width: 45%;
 }
 
-#right-arrow{
-  right: 15px;
+.img-panel{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-#menu-btn{
+.img-panel div{
   display: block;
+  width: 20%;
 }
-/* IDs */
 
+.arrows{
+  display: none;
+}
+/*Left Side Main*/
 
+/*Right Side Main*/
+.right-side-main{
+  width: 45%;
+  align-items: center;
+}
+
+.price-div{
+  width: 90%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-actions-div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.number-of-products-btn{
+  padding: .8em;
+  width: 35%;
+}
+
+#add-to-cart{
+  padding: .8em;
+  width: 60%;
+}
+/*Right Side Main*/
+}
+
+@media screen and (min-width: 1245px) {
+  .right-side-main{
+    width: 40%;
+  }
+
+  h1{
+    font-size: 3rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+  }
+}
